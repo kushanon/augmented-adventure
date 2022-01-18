@@ -19,7 +19,7 @@ AFRAME.registerComponent('finder', {
         var heights = [-100, -60, -20, 20, 60, 100, 140, 200, 240, 280];
         var stevec = 0;
         console.log(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&type=restaurant&rankby=distance&radius=2000&key=${API_KEY}`);
-        fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&type=restaurant&rankby=distance&key=${API_KEY}`)
+        fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&type=restaurant&rankby=distance&key=${API_KEY}`, {mode: 'no-cors'})
             .then(function (response) {
                 if (response.status !== 200) {
                     console.log('Looks like there was a problem. Status Code: ' +

@@ -21,6 +21,7 @@ AFRAME.registerComponent('finder', {
         console.log(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&type=restaurant&rankby=distance&radius=2000&key=${API_KEY}`);
         fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&type=restaurant&rankby=distance&key=${API_KEY}`, {mode: 'no-cors'})
             .then(function (response) {
+                console.log(response.json());
                 if (response.status !== 200) {
                     console.log('Looks like there was a problem. Status Code: ' +
                         response.status);

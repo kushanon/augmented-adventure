@@ -13,7 +13,7 @@ AFRAME.registerComponent('finder', {
     },
 
     _loadLocations: function (longitude, latitude) {
-        const API_KEY = 'AIzaSyCC2aDWxhRGLni1Tz5MlhdX9-6WwX5d3kM';
+        const API_KEY = 'AIzaSyD99Ihem-EZloUlpZthX8BT1Vc0LtxP6_4';
         var scale = 100;
         var el = this.el;
         var heights = [-100, -60, -20, 20, 60, 100, 140, 200, 240, 280];

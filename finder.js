@@ -18,10 +18,11 @@ AFRAME.registerComponent('finder', {
         var el = this.el;
         var heights = [-100, -60, -20, 20, 60, 100, 140, 200, 240, 280];
         var stevec = 0;
+        console.log('longitude' + longitude);
+        console.log('latitude' + latitude);
         console.log(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&type=restaurant&rankby=distance&radius=2000&key=${API_KEY}`);
         fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&type=restaurant&rankby=distance&key=${API_KEY}`, {mode: 'no-cors'})
             .then(function (response) {
-                console.log(response.json());
                 if (response.status !== 200) {
                     console.log('Looks like there was a problem. Status Code: ' +
                         response.status);
